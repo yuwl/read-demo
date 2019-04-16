@@ -33,6 +33,11 @@ export default new Router({
       path: '/find',
       name: 'find',
       component: () => import(/* webpackChunkName: "about" */ './read/Find.vue')
+    },
+    {
+      path: '/attentionTab',
+      name: 'attentionTab',
+      component: () => import(/* webpackChunkName: "about" */ './read/AttentionTab.vue')
     }
   ]
 })
