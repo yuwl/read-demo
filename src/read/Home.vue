@@ -42,14 +42,6 @@
             },
             jumpPublish: function () {
                 this.$router.push('publish');
-            },
-            queryNews: function () {
-                //发送get请求
-                this.$http.get('https://www.apiopen.top/journalismApi').then(function(res){
-                    console.log('news: ',res);
-                },function(){
-                    console.log('请求失败处理');
-                });
             }
         },
         computed: {
@@ -81,7 +73,7 @@
                     return _this.news;
                 },
                 set: function () {
-                    console.log('computed.set...');
+                    //console.log('computed.set...');
                 }
             }
         }

@@ -67,7 +67,7 @@
                     return _this.hots;
                 },
                 set: function () {
-                    console.log('computed.set...');
+                    //console.log('computed.set...');
                 }
             },
             newList: {
