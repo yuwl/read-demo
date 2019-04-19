@@ -9,13 +9,19 @@
                     placeholder="请输入用户名"
             />
 
-            <label>性别：</label>
+            <label style="padding: 15px;">性别</label>
             <van-radio-group v-model="radio">
-                <van-radio name="男">男</van-radio>
-                <van-radio name="女">女</van-radio>
+                <van-cell-group>
+                    <van-cell title="男" clickable @click="radio = '男'">
+                        <van-radio name="1" />
+                    </van-cell>
+                    <van-cell title="女" clickable @click="radio = '女'">
+                        <van-radio name="2" />
+                    </van-cell>
+                </van-cell-group>
             </van-radio-group>
 
-            <label>爱好：</label>
+            <label style="padding: 15px;">爱好</label>
             <van-checkbox-group v-model="result">
                 <van-checkbox
                         v-for="(item, index) in list"
@@ -48,7 +54,7 @@
 </template>
 
 <script>
-    import { Tabbar, TabbarItem, Field, RadioGroup, Radio,Checkbox, CheckboxGroup, Button  } from 'vant';
+    import { Tabbar, TabbarItem, Field, RadioGroup, Radio,Checkbox, CheckboxGroup, Button, Cell, CellGroup  } from 'vant';
     import store from '@/store';
     export default {
         name: "publish",
@@ -61,6 +67,8 @@
             [Checkbox.name]: Checkbox,
             [CheckboxGroup.name]: CheckboxGroup,
             [Button.name]: Button,
+            [Cell.name]: Cell,
+            [CellGroup.name]: CellGroup,
             store
         },
         data() {

@@ -5,6 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    username: 'admin',
+    password: '123456',
     count: 1,
     users: []
   },
